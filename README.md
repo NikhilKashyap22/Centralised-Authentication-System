@@ -6,7 +6,7 @@
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
 
 ## Overview
-This Authentication Service is a Spring Boot application that provides token generation and validation using JWT (JSON Web Token). It does not include user authentication logic, filters, or security configuration. These must be implemented by the users of this project.
+This Authentication Service is a Spring Boot application that provides token generation and validation using JWT (JSON Web Token). It does not include filters or security configuration. These must be implemented by the users of this project.
 
 ## Features
 - Generates JWT tokens for authentication
@@ -41,7 +41,7 @@ This Authentication Service is a Spring Boot application that provides token gen
 ### Generate Token
 To generate a JWT token, send a `POST` request to:
 ```http
-POST /api/auth/token
+POST /api/auth/login
 ```
 with the required payload.
 
@@ -67,7 +67,4 @@ spring.datasource.password=yourpassword
 
 ## License
 This project is open-source and available under the MIT License.
-
----
-Made with ❤️ using Spring Boot, Hibernate, MySQL, and JWT.
 

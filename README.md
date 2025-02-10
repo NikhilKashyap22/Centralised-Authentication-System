@@ -22,7 +22,7 @@ This Authentication Service is a Spring Boot application that provides token gen
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/your-repo/authentication-service.git](https://github.com/NikhilKashyap22/Centralised-Authentication-System.git)
+   git clone (https://github.com/NikhilKashyap22/Centralised-Authentication-System.git)
    ```
 2. Navigate to the project directory:
    ```sh

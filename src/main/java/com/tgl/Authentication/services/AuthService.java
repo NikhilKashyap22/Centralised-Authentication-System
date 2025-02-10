@@ -24,24 +24,16 @@ public class AuthService {
 	
 	
 	public User registerUser(User user) {
-//		if (user.getRole() == null) {
-//	        user.setRole(Role.USER); // Default role
-//	    }
+		if (user.getRole() == null) {
+	        user.setRole(Role.USER);
+	    }
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		return userRepository.save(user);
 	}
 	
-//	public String loginUser(String username, String password) {
-//		Optional<User> user = userRepository.findByusername(username);
-//		if(user.isPresent() && passwordEncoder.matches(password, user.get().getPassword())) {
-//			return jwtUtil.generateToken(username);
-//		}
-//		return null;
-//	}
-	
 	public String login(String username, String password) {
       Optional<User> userOptional = userRepository.findByusername(username);
-      System.out.println("++++++++++++++++++++++++++"+userOptional);
+      
 
       if (userOptional.isPresent()) {
           User user = userOptional.get();
@@ -49,7 +41,7 @@ public class AuthService {
               return jwtUtil.generateToken(username);
           }
       }
-      return null;  // Invalid credentials
+      return null;
   }
 
 }
